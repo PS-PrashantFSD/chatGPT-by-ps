@@ -12,16 +12,16 @@ const Register = () => {
   const isNotMobile = useMediaQuery("(min-width:1000px)")
 
   //state
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
 
   // regster ctrl
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('api/v1/auth/register', {username, email, password})
+      await axios.post('http://localhost:8000/api/v1/auth/register', {username, email, password});
       toast.success('User Register Successfully')
       navigate('/login')
     } catch (err) {

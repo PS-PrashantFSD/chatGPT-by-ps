@@ -10,6 +10,7 @@ import Navbar from './component/Navbar';
 import Homepage from './pages/Homepage'
 import Login from './pages/Login'
 import Register from './pages/Register'
+import Summary from './pages/Summary';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path='/' element= {<Homepage/>} />
         <Route path='/login' element= {<Login/>} />
         <Route path='/register' element= {<Register/>} />
+        <Route path='/summary' element= {<Summary/>} />
       </Routes>
     </ThemeProvider>
     </>

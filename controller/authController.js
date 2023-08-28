@@ -40,13 +40,13 @@ exports.loginController = async (req, res, next) => {
         if (!user) {
             return next(new errorResponse('Invalid credential', 401));
         }
-        const isMatch = await userModel.matchPassword(password);
+        const isMatch = await user.matchPassword(password);
         if (!isMatch) {
             return next(new errorResponse('Invalid credential', 401));
         }
 
         // Response
-        exports.sendToken(user, 200, res); // Changed from "sendToken" to "exports.sendToken"
+        this.sendToken(user, 200, res); // Changed from "sendToken" to "exports.sendToken"
     } catch (error) {
         console.log(error);
         next(error);

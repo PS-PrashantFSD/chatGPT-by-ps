@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: "roboto", sans-serif;
 }
 
@@ -15,7 +15,10 @@ a {
   margin-top: 20px;
 }
 
-a:hover{
-  color: white !important ;
+a:hover {
+  color: black !important;
+}
 
+a.active {
+  color: #57d96d !important;
 }

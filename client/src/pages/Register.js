@@ -21,7 +21,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:8000/api/v1/auth/register', {username, email, password});
+      await axios.post('/api/v1/auth/register', {username, email, password});
       toast.success('User Register Successfully')
       navigate('/login')
     } catch (err) {
@@ -36,11 +36,11 @@ const Register = () => {
   }
   return (
     <>
-    <Box width={isNotMobile ? '40%' : '80%'} p={'2rem'} m={'2rem auto'} borderRadius={5} sx={{boxShadow:5}} backgroundColor={theme.palette.background.main}>
+    <Box width={isNotMobile ? '40%' : '80%'} p={'2rem'} m={'2rem auto'} borderRadius={5} sx={{boxShadow:5}} backgroundColor={theme.palette.background.alt}>
       <Collapse in={error}>
       <Alert severity='error' sx={{mb:2}}>{error}</Alert>
       </Collapse>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} color='white'>
         <Typography variant='h3'>Sign Up</Typography>
         <TextField 
         label='username' 

@@ -24,6 +24,7 @@ app.use(errorHandler)
 
 //API Routes
 app.use('/api/v1/auth', authRoutes)
+app.use('/api/v1/openai', require('./routes/openaiRoutes'))
 
 app.listen(8000, () => {
     console.log("Server runnig in 8000")

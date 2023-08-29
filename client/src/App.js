@@ -11,6 +11,7 @@ import Homepage from './pages/Homepage'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import Summary from './pages/Summary';
+import Paragraph from './pages/Paragraph';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path='/login' element= {<Login/>} />
         <Route path='/register' element= {<Register/>} />
         <Route path='/summary' element= {<Summary/>} />
+        <Route path='/paragraph' element= {<Paragraph/>} />
       </Routes>
     </ThemeProvider>
     </>

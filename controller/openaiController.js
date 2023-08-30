@@ -4,13 +4,14 @@ const { Configuration, OpenAIApi } = require("openai");
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 });
+
 const openai = new OpenAIApi(configuration);
 
 exports.summaryController = async (req, res) => {
   try {
     const { text } = req.body;
     const { data } = await openai.createCompletion({
-      model: "gpt-3.5-turbo-0613",
+      model: "text-davinci-003",
       prompt: `Summarize this \n${text}`,
       max_tokens: 500,
       temperature: 0.5,

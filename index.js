@@ -9,6 +9,7 @@ const errorHandler = require('./middleware/errorMiddleware');
 
 //Routes Paths
 const authRoutes = require('./routes/authRoute');
+const openai = require('./routes/openaiRoutes')
 
 dotenv.config()
  
@@ -24,7 +25,7 @@ app.use(errorHandler)
 
 //API Routes
 app.use('/api/v1/auth', authRoutes)
-app.use('/api/v1/openai', require('./routes/openaiRoutes'))
+app.use('/api/v1/openai', openai)
 
 app.listen(8000, () => {
     console.log("Server runnig in 8000")

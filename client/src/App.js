@@ -12,6 +12,9 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import Summary from './pages/Summary';
 import Paragraph from './pages/Paragraph';
+import ChatBot from './pages/ChatBot';
+import JsConverter from './pages/JsConverter';
+import ScifiImage from './pages/ScifiImage';
 
 
 function App() {
@@ -29,6 +32,9 @@ function App() {
         <Route path='/register' element= {<Register/>} />
         <Route path='/summary' element= {<Summary/>} />
         <Route path='/paragraph' element= {<Paragraph/>} />
+        <Route path='/chatbot' element= {<ChatBot/>} />
+        <Route path='/js-converter' element= {<JsConverter/>} />
+        <Route path='/scifi-image' element= {<ScifiImage/>} />
       </Routes>
     </ThemeProvider>
     </>
